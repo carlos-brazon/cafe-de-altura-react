@@ -38,18 +38,18 @@ const Formulario = () => {
                 <form action="#">
                     <div className="general flex">
                         <div className="nombre flex">
-                            <label for="name" className="flex">Nombre completo</label>
+                            <label htmlFor="name" className="flex">Nombre completo</label>
                             <input type="text" name="name" id="name" className="flex" />
 
                         </div>
                         <div className="nombre flex">
-                            <label for="email" className="flex">Email</label>
+                            <label htmlFor="email" className="flex">Email</label>
                             <input type="text" name="email" id="email" />
 
                         </div>
 
                         <div className="nombre flex">
-                            <label for="mobile" className="flex">Teléfono</label>
+                            <label htmlFor="mobile" className="flex">Teléfono</label>
                             <div className="selectnumber flex">
                                 <select id="country-code">
                                     <option value="US">US</option>
@@ -60,15 +60,15 @@ const Formulario = () => {
                         </div>
 
                         <div className="coment flex">
-                            {/* <label for="comment" style="visibility: hidden">.</label> */}
-                            <label for="comment">.</label>
+                            {/* <label htmlFor="comment" style="visibility: hidden">.</label> */}
+                            <label htmlFor="comment">.</label>
                             <textarea id="comment" name="comment" required
                                 placeholder="¿En qué podemos ayudarte?"></textarea>
                         </div>
 
                         <div className="check flex">
                             <input type="checkbox" id="checkbox" name="" />
-                            <label for="terminoscondiciones">
+                            <label htmlFor="terminoscondiciones">
                                 <p>Acepto la <a href="">Política de privacidad</a> y los <a href="">Términos y
                                     condiciones</a></p>
                             </label>

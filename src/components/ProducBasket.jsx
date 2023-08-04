@@ -2,19 +2,18 @@ import React, { useContext, useState } from 'react'
 import Less from "../assets/menos.png";
 import More from "../assets/mas.png";
 import { AllItemsContext } from '../context/CoffeContex';
+import { replaceDot } from "../utils/util";
 
 const ProducBasket = ({ objCoffe: { brand, img_url, price, quantity, _id } }) => {
     const [counter, setCounter] = useState(1)
     const { setCloud, allCoffe, setPriceSubTotal } = useContext(AllItemsContext)
     // console.log(counter);
     const more = (boolean) => {
-        console.log(typeof Number(price));
         boolean ? setPriceSubTotal(prev => prev + price) : setPriceSubTotal(prev => prev - price)
         setCloud(prev => {
             const holdPrev = [...prev]
             const coffe = holdPrev.find(coffe => coffe._id == _id);
             if (coffe && boolean) {
-                // setPriceSubTotal(prev => price+prev)
                 coffe.quantity += 1
                 return holdPrev
             }
@@ -23,7 +22,6 @@ const ProducBasket = ({ objCoffe: { brand, img_url, price, quantity, _id } }) =>
                 return coffe.quantity == 0 ? holdPrev.filter(objCoffe => coffe._id !== objCoffe._id) : holdPrev
             }
         });
-        // setCounter(quantity)
     }
 
     return (
@@ -41,7 +39,7 @@ const ProducBasket = ({ objCoffe: { brand, img_url, price, quantity, _id } }) =>
                     <a href="">{brand}</a>
                     <p>Paquete de café, 250 gr</p>
                 </div>
-                <h3>{(price * quantity).toFixed(2)}€</h3>
+                <h3>{replaceDot(price * quantity)}</h3>
             </div>
             <div className='bg-taupe h-px last:hidden'></div>
         </>

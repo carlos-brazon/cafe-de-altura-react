@@ -6,11 +6,10 @@ import Total from '../components/Total';
 
 const Basket = () => {
   const { cloud, counterHeader } = useContext(AllItemsContext);
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState(0);
 
   const handleRadioChange = (event) => {
-    console.log(event.target.value);
-    setSelectedValue(event.target.value);
+    setSelectedValue(Number(event.target.value));
   };
   return (
     <section className="basket-inicial flex flex-col items-center p-6 gap-6">
@@ -32,7 +31,7 @@ const Basket = () => {
           <div className="basket-divider"></div>
 
           <TypeShipping follow={'Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes de las 13:00)'}
-            value={9.00}
+            value={9}
             type={'Envío urgente 24h'}
             idInput={'enviourgente'}
             onChange={handleRadioChange}

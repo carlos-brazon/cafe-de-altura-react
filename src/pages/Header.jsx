@@ -20,11 +20,11 @@ const Header = () => {
                 </Link>
                 <nav>
                     <ul className="flex gap-4">
-                        <li><Link to={'Store'}><a className='p-2 hover:bg-blackTransparent rounded-lg' href=''>Tienda</a></Link></li>
-                        <li><a className='p-2 hover:bg-blackTransparent rounded-lg' href="./pages/suscription.html">Suscripción</a></li>
-                        <li><a className='p-2 hover:bg-blackTransparent rounded-lg' href="./pages/empresas.html">Para empresas</a></li>
-                        <li><a className='p-2 hover:bg-blackTransparent rounded-lg' href="./pages/about.html">Sobre nosotros</a></li>
-                        <li><a className='p-2 hover:bg-blackTransparent rounded-lg' href="./pages/contact.html">Contacto</a></li>
+                        <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Tienda</Link></li>
+                        <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Suscripción</Link></li>
+                        <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Para empresas</Link></li>
+                        <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Sobre nosotros</Link></li>
+                        <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Contacto</Link></li>
                     </ul>
                 </nav>
                 <div className="flex items-center gap-6">

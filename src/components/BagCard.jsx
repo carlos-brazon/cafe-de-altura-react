@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { AllItemsContext } from '../context/CoffeContex';
-
+import { replaceDot } from "../utils/util.js";
 const BagCard = ({ objCoffe }) => {
-    const { cloud, setCloud, setPriceSubTotal } = useContext(AllItemsContext)
+    const { setCloud, setPriceSubTotal } = useContext(AllItemsContext)
 
     const handleClick = () => {
         setPriceSubTotal(prev => prev+ objCoffe.price)
@@ -16,13 +16,12 @@ const BagCard = ({ objCoffe }) => {
             }
         });
     }
-console.log(cloud);
     return (
         <div className="flex flex-col items-center gap-6 p-6 rounded-lg border border-taupe hover:bg-taupe ">
             <img src={objCoffe?.img_url} alt="" />
             <div className="flex flex-col items-center gap-3">
                 <a href="">{objCoffe?.brand}</a>
-                <p>{objCoffe?.price}€</p>
+                <p>{replaceDot(objCoffe?.price)}</p>
             </div>
             <button onClick={() => handleClick()} className="p-2 rounded bg-green70 text-white hover:bg-green">Añadir</button>
         </div>

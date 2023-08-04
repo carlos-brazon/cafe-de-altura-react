@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import ButtonLink from './ButtonLink'
 import { AllItemsContext } from '../context/CoffeContex'
+import { replaceDot } from '../utils/util';
 
 const Total = ({ selectedValue }) => {
     const { priceSubTotal } = useContext(AllItemsContext);
@@ -11,7 +12,7 @@ const Total = ({ selectedValue }) => {
                 <div className="bg-taupe h-px"></div>
                 <div className="flex justify-between">
                     <p>SUBTOTAL</p>
-                    <span>{priceSubTotal.toFixed(2)}€</span>
+                    <span>{replaceDot(priceSubTotal)}</span>
                 </div>
                 <div className="flex justify-between">
                     <p>ENVÍO</p>
@@ -21,8 +22,8 @@ const Total = ({ selectedValue }) => {
                 <div className="flex justify-between">
                     <p className='font-semibold'>TOTAL</p>
                     <div className="flex flex-col items-end gap-2">
-                        <span>{selectedValue>0 && priceSubTotal ? priceSubTotal+Number(selectedValue) : priceSubTotal}€</span>
-                        <p className="font-normal text-grey text-xs">Incluye <span className='font-normal text-grey text-xs'>{selectedValue>0 && priceSubTotal ? ((priceSubTotal+Number(selectedValue))*0.21).toFixed(2) : (priceSubTotal*0.21).toFixed(2)  }</span>€ de IVA</p>
+                        <span>{replaceDot(selectedValue && priceSubTotal ? priceSubTotal+selectedValue : priceSubTotal)}</span>
+                        <p className="font-normal text-grey text-xs">Incluye <span className='font-normal text-grey text-xs'>{replaceDot(selectedValue && priceSubTotal ? (priceSubTotal+selectedValue)*0.21 : priceSubTotal*0.21 )}</span> de IVA</p>
                     </div>
                 </div>
             </div>
