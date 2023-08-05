@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import BagCard from '../components/BagCard'
-import ArrowRight from '../assets/Arrow\ narrow\ right\ \(1\).png'
+import ArrowRight from '../assets/Arrow-right.svg'
 import { AllItemsContext } from '../context/CoffeContex'
-import { Link } from 'react-router-dom'
+import ArrowLink from '../components/ArrowLink'
 
 const BagsCoffe = () => {
     const { allCoffe } = useContext(AllItemsContext);
+    console.log(allCoffe);
 
     return (
         <section className="flex flex-col items-center gap-6 p-10">
@@ -15,12 +16,10 @@ const BagsCoffe = () => {
                 {allCoffe.map((objCoffe, i) => i < 4 ? <BagCard objCoffe={objCoffe} key={objCoffe._id} /> : null)}
             </article>
 
-            <Link to={'store'}>
-                <div className="flex items-center gap-4">
-                    <p className='flex font-semibold text-blackOriginal underline'>Ver todos</p>
-                    <img src={ArrowRight} alt="Aquí va la imagen de una flecha" />
-                </div>      
-            </Link>
+            <ArrowLink text={'Ver todos'}
+                textColor={'text-blackOriginal'}
+                urlImg={ArrowRight}
+                link={'store'} />
 
         </section>
     )

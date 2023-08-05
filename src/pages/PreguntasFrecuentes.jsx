@@ -1,9 +1,7 @@
 import React from 'react'
-import { useEffect, useState } from "react";
-import ArrowUp from "../assets/Chevron\ up.png";
-import ArrowDown from "../assets/Chevron\ down.png";
-import ArrowRigthWhite from "../assets/Arrow\ narrow\ right\ white.png";
+import ArrowRigthWhite from "../assets/Arrow-right-white.svg";
 import Pregunta from './Pregunta';
+import ArrowLink from '../components/ArrowLink';
 
 const questions = [
   {
@@ -21,7 +19,6 @@ const questions = [
 ]
 
 const PreguntasFrecuentes = () => {
-  // const [chevron, setChevron] = useState(true);
 
   return (
     <section className="section4 flex flex-col items-center py-12 bg-green gap-6">
@@ -29,13 +26,10 @@ const PreguntasFrecuentes = () => {
       <article className="faq flex flex-col gap-4">
         {questions.map((question, i) => <Pregunta key={i} question={question.question} text={question.text} />)}
       </article>
-
-      <a href="">
-        <div className="link2 flex flex-row items-center gap-4">
-          <p className='flex font-semibold text-white underline'>Resolvemos tus dudas</p>
-          <img src={ArrowRigthWhite} alt="" />
-        </div>
-      </a>
+      <ArrowLink text={'Resolvemos tus dudas'}
+        textColor={'text-white'}
+        urlImg={ArrowRigthWhite}
+        link={'store'} />
     </section>
   )
 }

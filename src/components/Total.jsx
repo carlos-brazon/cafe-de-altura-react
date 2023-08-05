@@ -16,21 +16,26 @@ const Total = ({ selectedValue }) => {
                 </div>
                 <div className="flex justify-between">
                     <p>ENVÍO</p>
-                    <span>{selectedValue>1 ? '9.00€' : 'GRATIS'}</span>
+                    <span>{selectedValue > 1 ? '9.00€' : 'GRATIS'}</span>
                 </div>
                 <div className="bg-taupe h-px"></div>
                 <div className="flex justify-between">
                     <p className='font-semibold'>TOTAL</p>
                     <div className="flex flex-col items-end gap-2">
-                        <span>{replaceDot(selectedValue && priceSubTotal ? priceSubTotal+selectedValue : priceSubTotal)}</span>
-                        <p className="font-normal text-grey text-xs">Incluye <span className='font-normal text-grey text-xs'>{replaceDot(selectedValue && priceSubTotal ? (priceSubTotal+selectedValue)*0.21 : priceSubTotal*0.21 )}</span> de IVA</p>
+                        <span>{replaceDot(selectedValue && priceSubTotal ? priceSubTotal + selectedValue : priceSubTotal)}</span>
+                        <p className="font-normal text-grey text-xs">Incluye <span className='font-normal text-grey text-xs'>{replaceDot(selectedValue && priceSubTotal ? (priceSubTotal + selectedValue) * 0.21 : priceSubTotal * 0.21)}</span> de IVA</p>
                     </div>
                 </div>
             </div>
 
             <div className="buttons flex gap-4">
-                <ButtonLink text={'Ir a checkout'} link={'./pages/store.html'} className={'bg-green rounded py-3 px-6 text-white text-sm font-semibold leading-4'} />
-                <ButtonLink text={'Seguir comprando'} link={'store'} className={'rounded py-3 px-6 text-green text-sm font-semibold leading-4'} />
+                <ButtonLink text={'Ir a checkout'}
+                    link={'./pages/store.html'}
+                    className={'bg-green text-white'} />
+
+                <ButtonLink text={'Seguir comprando'}
+                    link={'store'}
+                    className={'text-green'} />
             </div>
         </div>
     )

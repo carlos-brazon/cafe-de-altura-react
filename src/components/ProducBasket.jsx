@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import Less from "../assets/menos.png";
-import More from "../assets/mas.png";
+import Less from "../assets/menos.svg";
+import More from "../assets/mas.svg";
 import { AllItemsContext } from '../context/CoffeContex';
 import { replaceDot } from "../utils/util";
 

@@ -11,7 +11,7 @@ import Basket from './pages/Basket';
 function App() {
 
   return (
-    <div>
+    <div className='font-outfit font-normal pt-[68px] w-[1280px]'>
 
       <CoffeContex>
         <BrowserRouter>

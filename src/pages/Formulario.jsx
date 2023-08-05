@@ -1,14 +1,14 @@
 import React from 'react'
 import ImgLink from '../components/ImgLink'
-import IconePhoneForm from "../assets/Phone.contac.png";
-import IconEmail from "../assets/Mail.png";
+import IconePhoneForm from "../assets/Phone-gray.svg";
+import IconEmail from "../assets/Mail-gray.svg";
 
 const Formulario = () => {
     return (
         <section className="split flex">
-            <div className="contac flex">
+            <div className="contac flex ">
                 <div className="titulo flex">
-                    <h3>Entra en contacto con nosotros</h3>
+                    <h3 className='text-grey'>Entra en contacto con nosotros</h3>
                     <p>Si tienes dudas, ponte en contacto con nosotros a través del formulario y te responderemos lo
                         antes posible.</p>
                 </div>
@@ -19,16 +19,16 @@ const Formulario = () => {
                         <p>742 Evergreen Terrace</p>
                         <p>Springfield, OR 12345</p>
                     </div>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col items-start gap-4">
                         <ImgLink text={'+1 (555) 123-4567'}
-                            className={'flex items-center gap-3'}
+                            className={'gap-3'}
                             urlImg={IconePhoneForm}
-                            weight={'font-normal'} x />
+                            classNameText={'font-normal'} />
 
                         <ImgLink text={'support@example.com'}
-                            className={'flex items-center gap-3 font'}
+                            className={'gap-3'}
                             urlImg={IconEmail}
-                            weight={'font-normal'} />
+                            classNameText={'font-normal'} />
                     </div>
                     <p>¿Buscas un trabajo? <a href=""> Ver nuestras ofertas.</a></p>
                 </div>

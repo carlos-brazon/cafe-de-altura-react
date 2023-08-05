@@ -22,6 +22,9 @@ export default {
         'aliceblue': '#E3DED74D'
       },
     },
+    fontFamily: {
+      'outfit': ['Outfit', 'sans-serif'],
+    },
   },
   plugins: [],
 }

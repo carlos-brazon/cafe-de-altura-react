@@ -1,28 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{
-    --blackOriginal: #000000;
-    --grey: #515051;
-    --darkgrey: #2B2A2B;
-    --black: #1F1815;
-    --blackTransparent: #F7F5F31A;
-    --taupe: #E3DED7;
-    --green: #2A5B45;
-    --green70:#2A5B45B2;
-    --greentransparen: #2A5B451A;
-    --white: #ffffff;
-    --whiteOff: #F7F5F3;
-    --bluedark: #111827;
-}
 
 *{
-    font-family: 'Outfit', sans-serif;
-    font-style: normal;
+
 }
 body{
-    width: 1280px;
-    padding-top: 68px;
+    /* width: 1280px;
+    padding-top: 68px; */
 }
 
 h1 {
@@ -65,7 +50,7 @@ span{
 }
 
 header {
-    width: 1280px;
+    /* width: 1280px; */
     /* background-color: var(--darkgrey); */
     /* align-items: center;
     justify-content: space-between; */
@@ -383,8 +368,8 @@ header {
 } */
 
 .lol {
-    border-bottom: none;
-    padding-bottom: 0px;
+    /* border-bottom: none;
+    padding-bottom: 0px; */
 }
 
 /* .chevron {
@@ -394,7 +379,7 @@ header {
 } */
 
 .chevronDown {
-    background-image: url('../assets/Chevron\ down.png');
+    /* background-image: url('../assets/Chevron\ down.png'); */
 }
 
 /* .question>p {
@@ -415,7 +400,7 @@ header {
 } */
 
 .link2>.arrow {
-    background-image: url("../assets/Arrow\ narrow\ right\ white.png");
+    /* background-image: url("../assets/Arrow\ narrow\ right\ white.png"); */
 }
 
 
@@ -616,7 +601,7 @@ footer h3 {
 }
 
 .contacwrapper .telfyboton:last-child .iconphone {
-    background-image: url("../assets/Mail-white.png");
+    /* background-image: url("../assets/Mail-white.png"); */
 }
 
 .linkfooter {
@@ -631,7 +616,7 @@ footer h3 {
 
 .grid {
     /* display: grid; */    
-    grid-template-columns: 0.93fr 1.07fr;
+    /* grid-template-columns: 0.93fr 1.07fr; */
 }
 
 .copyright {
