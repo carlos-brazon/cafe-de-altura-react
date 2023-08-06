@@ -6,14 +6,13 @@ import ArrowLink from '../components/ArrowLink'
 
 const BagsCoffe = () => {
     const { allCoffe } = useContext(AllItemsContext);
-    console.log(allCoffe);
 
     return (
         <section className="flex flex-col items-center gap-6 p-10">
-            <h2 className='text-green'>Novedades</h2>
+            <h2 className='font-medium text-2xl leading-7 text-green'>Novedades</h2>
 
             <article className="flex flex-row gap-8 justify-between">
-                {allCoffe.map((objCoffe, i) => i < 4 ? <BagCard objCoffe={objCoffe} key={objCoffe._id} /> : null)}
+                {allCoffe.slice(0, 4).map((objCoffe, i) => i < 4 ? <BagCard objCoffe={objCoffe} key={objCoffe._id} /> : null)}
             </article>
 
             <ArrowLink text={'Ver todos'}

@@ -22,7 +22,7 @@ const PreguntasFrecuentes = () => {
 
   return (
     <section className="section4 flex flex-col items-center py-12 bg-green gap-6">
-      <h2 className='text-white'>Preguntas frecuentes</h2>
+      <h2 className=' font-medium text-2xl leading-7 text-white'>Preguntas frecuentes</h2>
       <article className="faq flex flex-col gap-4">
         {questions.map((question, i) => <Pregunta key={i} question={question.question} text={question.text} />)}
       </article>
