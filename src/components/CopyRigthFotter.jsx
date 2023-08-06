@@ -1,10 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CopyRigthFotter = () => {
   return (
-    <div className="copyright bg-darkgrey py-4 px-0 text-center text-white">
-      <a href=""> Todos los derechos reservados - Café de Altura SL - 2022</a>
-    </div>
+      <Link className="flex justify-center font-semibold text-sm leading-4 bg-darkgrey py-4 px-0 text-center text-white" to={''}> Todos los derechos reservados - Café de Altura SL - 2022</Link>
   )
 }
 

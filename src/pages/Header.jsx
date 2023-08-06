@@ -14,11 +14,11 @@ const Header = () => {
         <>
             <header className="flex items-center justify-between py-[14px] fixed top-0 z-10 px-10 bg-darkgrey text-white w-[1280px]">
                 <Link className="flex items-center gap-[7.33px]" to={'/'}>
-                    <p className=' text-2xl leading-4 font-normal'>cafedealtura.com</p>
+                    <p className=' text-2xl leading-9 font-normal'>cafedealtura.com</p>
                     <img src={cupImage} alt="Aquí va una imagen de un taza" />
                 </Link>
                 <nav>
-                    <ul className="flex gap-4">
+                    <ul className="flex font-semibold text-sm leading-4 gap-4">
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Tienda</Link></li>
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Suscripción</Link></li>
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Para empresas</Link></li>
@@ -26,7 +26,7 @@ const Header = () => {
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Contacto</Link></li>
                     </ul>
                 </nav>
-                <div className="flex items-center gap-6">
+                <div className="flex font-semibold text-sm leading-4 items-center gap-6">
                     <ImgLink text={'+34 919 49 05 18'}
                         urlImg={PhoneWhite}
                         className={'gap-2'} />
@@ -39,7 +39,7 @@ const Header = () => {
                     urlImg={Carrito}
                     className={'gap-2'}
                     link={'basket'}
-                    classNameText={'flex bg-blackTransparent text-white items-center justify-center rounded-full w-6 h-6'} />
+                    classNameText={'flex font-normal text-xs leading-4 bg-blackTransparent text-white items-center justify-center rounded-full w-6 h-6'} />
 
             </header>
             <Outlet />

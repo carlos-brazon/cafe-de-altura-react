@@ -4,7 +4,6 @@ import PhoneWhite from '../assets/Phone-white.svg';
 import cupImage from '../assets/Cup-Coffe.svg';
 import ImgLink from './ImgLink';
 import { Link } from 'react-router-dom';
-import ButtonLink from './ButtonLink';
 
 const FooterInfo = () => {
     return (
