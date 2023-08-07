@@ -16,7 +16,7 @@ const Input = ({ labelText, type, name, id, value, select, onChange, valueSelect
             <label htmlFor={name} className="flex font-normal text-xs leading-4">{labelText}</label>
             <select id="country-code" name='country_code'
                 onChange={onChange} onClick={() => handleClick()}
-                className={`${select ? '' : 'hidden'} -z-0 top-8 h-9 border-0 bg-transparent outline-none absolute pr-[5px] pl-[13px]`} >
+                className={`${select ? '' : 'hidden'} -z-0 top-6 h-9 border-0 bg-transparent outline-none absolute pr-[5px] pl-[13px]`} >
                 <option value="US">US</option>
                 <option value="SP">SP</option>
             </select>
@@ -24,7 +24,7 @@ const Input = ({ labelText, type, name, id, value, select, onChange, valueSelect
                 onChange={onChange}
                 type={type} name={name} id={id} value={value}
                 placeholder={valueSelect === 'US' && select ? '+1 (555) 987-6543' : valueSelect === 'SP' && select ? '+34-631-395664' : valueSelect}
-                className={`w-full ${selectinput ? 'border-2 border-greenMed hover:border-greenMed' : ''} rounded-md border border-blueligth py-[9px] ${select || selectinput ? 'pr-[13px] pl-[66px] ' : ' px-[13px]'}   hover:border-blueMedLigth focus:outline-2 outline-greenMed `}
+                className={`w-full h-[40px] ${selectinput ? 'border-2 border-greenMed hover:border-greenMed' : ''} rounded-md border border-blueligth py-[9px] ${select || selectinput ? 'pr-[13px] pl-[66px] ' : ' px-[13px]'}   hover:border-blueMedLigth focus:outline-2 outline-greenMed `}
             />
         </div>
     )
