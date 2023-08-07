@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from './Header';
-import Hero from './Hero';
-import CardInfo from './CardInfo';
-import BagsCoffe from './BagsCoffe';
-import PreguntasFrecuentes from './PreguntasFrecuentes';
-import CoffeBar from './CoffeBar';
-import Formulario from './Formulario';
-import FooterInfo from '../components/FooterInfo';
+import Hero from '../components/sectionsCafeDeAltura/Hero';
+import CardInfo from '../components/sectionsCafeDeAltura/CardInfo.jsx';
+import BagsCoffe from '../components/sectionsCafeDeAltura/BagsCoffe.jsx';
+import PreguntasFrecuentes from '../components/sectionsCafeDeAltura/PreguntasFrecuentes.jsx';
+import CoffeBar from '../components/sectionsCafeDeAltura/CoffeBar.jsx';
+import Formulario from '../components/sectionsCafeDeAltura/Formulario.jsx';
+import FooterInfo from '../components/sectionsCafeDeAltura/FooterInfo.jsx';
 
 const CafeDeAltura = () => {
   return (

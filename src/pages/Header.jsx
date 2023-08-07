@@ -4,7 +4,7 @@ import PhoneWhite from '../assets/Phone-white.svg';
 import Carrito from '../assets/Icon-basket.svg';
 import ButtonLink from '../components/ButtonLink';
 import { Link, Outlet } from 'react-router-dom'
-import CopyRigthFotter from '../components/CopyRigthFotter';
+import CopyRigthFotter from './CopyRigthFotter';
 import { AllItemsContext } from '../context/CoffeContex';
 import ImgLink from '../components/ImgLink';
 
@@ -12,7 +12,7 @@ const Header = () => {
     const { counterHeader } = useContext(AllItemsContext);
     return (
         <>
-            <header className="flex items-center justify-between py-[14px] fixed top-0 z-10 px-10 bg-darkgrey text-white w-[1280px]">
+            <header className="flex items-center justify-between py-3 px-10 fixed top-0 z-10 bg-darkgrey text-white w-[1280px]">
                 <Link className="flex items-center gap-[7.33px]" to={'/'}>
                     <p className=' text-2xl leading-9 font-normal'>cafedealtura.com</p>
                     <img src={cupImage} alt="Aquí va una imagen de un taza" />
@@ -20,7 +20,7 @@ const Header = () => {
                 <nav>
                     <ul className="flex font-semibold text-sm leading-4 gap-4">
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Tienda</Link></li>
-                        <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Suscripción</Link></li>
+                        <li><Link to={'checkout'} className='p-2 hover:bg-blackTransparent rounded-lg' >Suscripción</Link></li>
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Para empresas</Link></li>
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Sobre nosotros</Link></li>
                         <li><Link to={'Store'} className='p-2 hover:bg-blackTransparent rounded-lg' >Contacto</Link></li>

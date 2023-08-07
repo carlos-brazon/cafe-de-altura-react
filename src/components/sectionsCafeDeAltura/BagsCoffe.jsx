@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import BagCard from '../components/BagCard'
-import ArrowRight from '../assets/Arrow-right.svg'
-import { AllItemsContext } from '../context/CoffeContex'
-import ArrowLink from '../components/ArrowLink'
+import BagCard from '../BagCard'
+import ArrowRight from '../../assets/Arrow-right.svg'
+import { AllItemsContext } from '../../context/CoffeContex'
+import ArrowLink from '../ArrowLink'
 
 const BagsCoffe = () => {
     const { allCoffe } = useContext(AllItemsContext);

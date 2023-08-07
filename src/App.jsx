@@ -3,9 +3,9 @@ import './App.css'
 import CoffeContex from './context/CoffeContex';
 import CafeDeAltura from './pages/CafeDeAltura';
 import Header from './pages/Header';
-import Hero from './pages/Hero';
 import  Store  from './pages/Store';
 import Basket from './pages/Basket';
+import Checkout from './pages/Checkout';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
               <Route index element={<CafeDeAltura />} />
               <Route path='store' element={<Store />} />
               <Route path='basket' element={<Basket />} />
+              <Route path='checkout' element={<Checkout />} />
             </Route>
           </Routes>
         </BrowserRouter>

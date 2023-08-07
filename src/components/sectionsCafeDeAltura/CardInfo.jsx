@@ -1,9 +1,9 @@
 import React from 'react'
-import Card from '../components/Card';
-import CardBg from "../assets/fondo2.jpg";
-import CardImg1 from "../assets/Icon-card1.svg";
-import CardImg2 from "../assets/icon-card2.svg";
-import CardImg3 from "../assets/icon-card3.svg";
+import Card from '../Card';
+import CardBg from "../../assets/fondo2.jpg";
+import CardImg1 from "../../assets/Icon-card1.svg";
+import CardImg2 from "../../assets/icon-card2.svg";
+import CardImg3 from "../../assets/icon-card3.svg";
 
 const CardInfo = () => {
     return (

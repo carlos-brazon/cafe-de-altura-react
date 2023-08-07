@@ -6,6 +6,7 @@ const CoffeContex = ({ children }) => {
   const [allCoffe, setAllCoffe] = useState([]);
   const [cloud, setCloud] = useState([])
   const [priceSubTotal, setPriceSubTotal] = useState(0);
+  const [selectedValue, setSelectedValue] = useState(0);
 
   const counterHeader = cloud?.reduce((acc, objCoffe) => acc + objCoffe.quantity, 0);
   const getCoffefromAppi = async () => {
@@ -17,7 +18,7 @@ const CoffeContex = ({ children }) => {
     getCoffefromAppi().then(data => setAllCoffe(data));
   }, []);
   return (
-    <AllItemsContext.Provider value={{ allCoffe, cloud, setCloud, priceSubTotal, setPriceSubTotal, counterHeader }}>
+    <AllItemsContext.Provider value={{ allCoffe, cloud, setCloud, priceSubTotal, setPriceSubTotal, counterHeader, selectedValue, setSelectedValue }}>
       {children}
     </AllItemsContext.Provider>
   );

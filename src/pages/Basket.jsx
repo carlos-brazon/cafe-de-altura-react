@@ -3,26 +3,28 @@ import { AllItemsContext } from '../context/CoffeContex';
 import ProducBasket from '../components/ProducBasket';
 import TypeShipping from '../components/TypeShipping';
 import Total from '../components/Total';
+import { Link } from 'react-router-dom';
 
 const Basket = () => {
-  const { cloud, counterHeader } = useContext(AllItemsContext);
-  const [selectedValue, setSelectedValue] = useState(0);
+  const { cloud, counterHeader, setSelectedValue } = useContext(AllItemsContext);
+  // const [selectedValue, setSelectedValue] = useState(0);
 
   const handleRadioChange = (event) => {
     setSelectedValue(Number(event.target.value));
   };
   return (
     <section className="basket-inicial flex flex-col items-center p-6 gap-6">
-
-      <h2 className='text-green'>Cesta (<span className='font-medium text-2xl leading-7'>{counterHeader}</span>)</h2>
-      <div className="basket-body flex gap-6">
-        <div className="basket-product-table flex flex-col gap-6 p-2 ">
-          <h3>Productos</h3>
+      <h2 className='font-medium text-2xl leading-7 text-green'>Cesta (<span className='font-medium text-2xl leading-7'>{counterHeader}</span>)</h2>
+      <div className="flex gap-6">
+        <div className="flex flex-col gap-6 p-2 ">
+          <h3 className='font-semibold text-lg leading-6'>Productos</h3>
           <div className='flex flex-col min-h-[280px] gap-6'>
-            {cloud?.map(objCoffe => <ProducBasket key={objCoffe._id} objCoffe={objCoffe} />)}
+            {cloud?.length ?
+              cloud?.map(objCoffe => <ProducBasket key={objCoffe._id} objCoffe={objCoffe} />)
+              : <p className='font-normal text-sm leading-4'>Tu cesta está vacia <Link className='font-semibold text-sm leading-4 underline' to={'/store'}>Pulsa aquí para agregar un nuevo producto</Link></p>}
           </div>
 
-          <h3>Seleccionar envío</h3>
+          <h3 className='font-semibold text-lg leading-6'>Seleccionar envío</h3>
           <TypeShipping follow={'Opción estándar sin seguimiento'}
             value={0}
             type={'Envío 5-7 días'}
@@ -38,7 +40,7 @@ const Basket = () => {
           />
 
         </div>
-        <Total selectedValue={selectedValue} />
+        <Total />
       </div>
 
     </section>

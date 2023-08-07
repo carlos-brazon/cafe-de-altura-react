@@ -1,7 +1,7 @@
 import React from 'react'
-import ArrowRigthWhite from "../assets/Arrow-right-white.svg";
-import Pregunta from './Pregunta';
-import ArrowLink from '../components/ArrowLink';
+import ArrowRigthWhite from "../../assets/Arrow-right-white.svg";
+import Pregunta from '../Pregunta';
+import ArrowLink from '../ArrowLink';
 
 const questions = [
   {

@@ -1,7 +1,7 @@
 import React from 'react'
-import ImgCoffeBar from "../assets/Coffe-bar.svg";
-import ArrowRight from "../assets/Arrow-right.svg";
-import ArrowLink from '../components/ArrowLink';
+import ImgCoffeBar from "../../assets/Coffe-bar.svg";
+import ArrowRight from "../../assets/Arrow-right.svg";
+import ArrowLink from '../ArrowLink';
 
 const CoffeBar = () => {
     const linkGamma = 'https://www.google.com/maps/place/Gamma+Tech+School/@40.4373922,-3.6776844,17z/data=!3m1!4b1!4m6!3m5!1s0xd4229deaf9deea1:0xed04d2cdcbd84b03!8m2!3d40.4373922!4d-3.6754957!16s%2Fg%2F11t18d_y50?hl=en'
