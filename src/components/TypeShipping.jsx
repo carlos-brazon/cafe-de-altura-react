@@ -1,8 +1,6 @@
 import React from 'react'
 
 const TypeShipping = ({ follow, type, value, idInput, onChange, name }) => {
-    console.log(name);
-    console.log(value);
     return (
         <div className="flex items-center justify-between">
             <div className="flex gap-4 items-center ">

@@ -13,10 +13,10 @@ const Basket = () => {
     setSelectedValue(Number(event.target.value));
   };
   return (
-    <section className="basket-inicial flex flex-col items-center p-6 gap-6">
+    <section className="flex flex-col items-center p-6 gap-6">
       <h2 className='font-medium text-2xl leading-7 text-green'>Cesta (<span className='font-medium text-2xl leading-7'>{counterHeader}</span>)</h2>
       <div className="flex gap-6">
-        <div className="flex flex-col gap-6 p-2 ">
+        <div className="flex flex-col gap-6 p-2 w-[811px] ">
           <h3 className='font-semibold text-lg leading-6'>Productos</h3>
           <div className='flex flex-col min-h-[280px] gap-6'>
             {cloud?.length ?

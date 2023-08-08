@@ -37,7 +37,7 @@ const ProducBasket = ({ objCoffe: { brand, img_url, price, quantity, _id } }) =>
                     <span className='font-semibold text-sm leading-4'>{brand}</span>
                     <p className='font-normal text-sm leading-4'>Paquete de café, 250 gr</p>
                 </div>
-                <h3 className='font-semibold text-lg leading-6'>{replaceDot(price * quantity)}</h3>
+                <h3 className='font-semibold text-lg leading-6 w-24 text-end'>{replaceDot(price * quantity)}</h3>
             </div>
             <div className='bg-taupe h-px last:hidden'></div>
         </>

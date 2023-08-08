@@ -32,7 +32,8 @@ const Header = () => {
                         className={'gap-2'} />
 
                     <ButtonLink text={'Iniciar sesión'}
-                        className={'bg-grey text-white '} />
+                        className={'bg-grey text-white '}
+                        link={'singin'} />
                 </div>
 
                 <ImgLink text={counterHeader}

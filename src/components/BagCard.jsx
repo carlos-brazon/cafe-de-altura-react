@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { AllItemsContext } from '../context/CoffeContex';
 import { replaceDot } from "../utils/util.js";
+
 const BagCard = ({ objCoffe }) => {
     const { setCloud, setPriceSubTotal } = useContext(AllItemsContext)
 
@@ -20,7 +21,7 @@ const BagCard = ({ objCoffe }) => {
     }   
     return (
         <div className={`flex flex-col items-center gap-6 p-6 rounded-lg border border-taupe transition duration-200 ease-in-out hover:bg-taupe`}>
-            <img className={objCoffe.available ?'': 'opacity-40'}src={objCoffe?.img_url} alt="" />
+            <img className={`w-[219.39px] h-[219.39px] ${objCoffe.available ?'': 'opacity-40'}` }src={objCoffe?.img_url} alt="" />
             <div className={`flex flex-col items-center gap-3 ${objCoffe.available ?'': 'opacity-40'}`}>
                 <span className='font-semibold text-sm leading-4'>{objCoffe?.brand}</span>
                 <p className='font-normal text-sm leading-4'>{replaceDot(objCoffe?.price)}</p>

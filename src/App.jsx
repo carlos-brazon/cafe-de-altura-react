@@ -6,9 +6,14 @@ import Header from './pages/Header';
 import  Store  from './pages/Store';
 import Basket from './pages/Basket';
 import Checkout from './pages/Checkout';
+import SingIn from './pages/SingIn';
 
 
 function App() {
+
+
+
+
 
   return (
     <div className='font-outfit font-normal pt-[68px] w-[1280px]'>
@@ -21,6 +26,7 @@ function App() {
               <Route path='store' element={<Store />} />
               <Route path='basket' element={<Basket />} />
               <Route path='checkout' element={<Checkout />} />
+              <Route path='singin' element={<SingIn />} />
             </Route>
           </Routes>
         </BrowserRouter>
