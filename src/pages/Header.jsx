@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import cupImage from '../assets/Cup-Coffe.svg';
 import PhoneWhite from '../assets/Phone-white.svg';
-import Carrito from '../assets/Icon-basket.svg';
+import Carrito from '../assets/icon-basket.svg';
 import ButtonLink from '../components/ButtonLink';
 import { Link, Outlet } from 'react-router-dom'
 import CopyRigthFotter from './CopyRigthFotter';
